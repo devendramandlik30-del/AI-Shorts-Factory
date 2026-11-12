@@ -1,0 +1,12 @@
+.env
+credentials/
+output/
+logs/
+temp/
+__pycache__/
+*.pyc
+.venv/
+assets/fonts/
+assets/visuals/
+ffmpeg.zip
+*.zip
