@@ -1,0 +1,34 @@
+# Python build/runtime artifacts
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Git and editor files
+.git/
+.gitignore
+.vscode/
+.idea/
+
+# Local secrets and credentials (mount at runtime; never bake into images)
+.env
+.env.*
+!.env.example
+credentials/
+token.json
+client_secret.json
+
+# Generated output/media and logs are persistent runtime volumes
+output/
+assets/visuals/
+assets/fonts/
+logs/
+temp/
+
+# Windows-only cached wheels are not used by the Linux image
+wheels/
+
+# Archives and OS files
+*.zip
+.DS_Store
+Thumbs.db

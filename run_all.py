@@ -62,7 +62,7 @@ def main():
     print(f"   Started:  {start.strftime('%H:%M:%S')}")
 
     # --- Step 1: script ---
-    if not run("Step 1/5 — Generating script (Qwen 7B)",
+    if not run("Step 1/5 — Generating script (Gemini 3.6 Flash)",
                [PY, "main.py", topic]):
         sys.exit(1)
 
