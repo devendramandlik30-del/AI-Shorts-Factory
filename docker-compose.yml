@@ -1,0 +1,21 @@
+services:
+  shorts-factory:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ai-shorts-factory:local
+    init: true
+    env_file:
+      - .env
+    environment:
+      PYTHONIOENCODING: utf-8
+      PYTHONUNBUFFERED: "1"
+    volumes:
+      - ./output:/app/output
+      - ./assets/visuals:/app/assets/visuals
+      - ./assets/fonts:/app/assets/fonts
+      - ./logs:/app/logs
+      - ./credentials:/app/credentials
+      - ./topics.txt:/app/topics.txt
+    # Default command — runs the daily runner (uses next topic from topics.txt)
+    command: ["python", "daily_run.py"]
